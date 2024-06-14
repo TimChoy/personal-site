@@ -6,7 +6,7 @@ export default function Home() {
       className={styles.main}
     >
       <p style={{ color: "white" }}>
-        Hey! Welcome to my website. There'll be more here soon.
+        {"Hey! Welcome to my website. There'll be more here soon."}
       </p>
     </div>
   );

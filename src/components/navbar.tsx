@@ -43,7 +43,7 @@ export default function NavBar() {
                 TC
               </Avatar>
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, marginLeft: "-64px" }}>
               <>
                 <Tabs centered sx={{ margin: "auto" }} value={selectedTab}>
                   <Tab
