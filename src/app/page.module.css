@@ -5,4 +5,10 @@
   top: 50%;
   width: 100%;
   margin-top: -100px;
+  color: white;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
 }

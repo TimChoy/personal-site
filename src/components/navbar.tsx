@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from "react"
-import { AppBar, Toolbar, Typography, Box, Container, Avatar, Tabs, Tab } from "@mui/material";
+import { AppBar, Toolbar, Box, Container, Tabs, Tab } from "@mui/material";
 import styles from "./navbar.module.css";
 import Link from "next/link";
 
@@ -22,28 +22,7 @@ export default function NavBar() {
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontWeight: 700,
-                color: "inherit",
-                textDecoration: "none",
-              }}
-              className="cursorp"
-            >
-              <Avatar
-                sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-                className="cursorp Tab8 animate__animated animate__backInLeft"
-              >
-                TC
-              </Avatar>
-            </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, marginLeft: "-64px" }}>
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }}}>
               <>
                 <Tabs centered sx={{ margin: "auto" }} value={selectedTab}>
                   <Tab
