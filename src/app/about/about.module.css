@@ -29,3 +29,19 @@
 .description {
     max-width: 50%;
 }
+
+@media screen and (max-width: 899px) {
+    .main {
+        height: auto;
+        margin-top: 22%;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .description {
+        max-width: 100%;
+    }
+}
