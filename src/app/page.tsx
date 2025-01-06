@@ -21,10 +21,15 @@ export default function Home() {
           2000,
           "안녕하세요!",
           2000,
+          "你好!",
+          2000,
         ]}
         repeat={Infinity}
         preRenderFirstString={true}
       />
+      <div className={styles.homeTitle}>
+        Welcome to my website! I'm Timothy Choy
+      </div>
       <p>
         {"Reach out to me here:"}
       </p>

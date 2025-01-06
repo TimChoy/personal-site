@@ -1,0 +1,31 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 90%;
+}
+
+.imageDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.headshot {
+    border-radius: 50%;
+}
+
+.description {
+    max-width: 50%;
+}
