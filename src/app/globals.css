@@ -7,3 +7,7 @@ body {
 a {
   color: inherit;
 }
+
+.MuiMenuList-root {
+  background-color: black;
+}
