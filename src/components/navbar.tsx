@@ -69,12 +69,13 @@ export default function NavBar() {
   );
 
   return (
-    <React.Fragment>
+    <div>
       <AppBar
         style={{
           borderBottom: "2px solid white",
           background: "rgb(0,0,0)",
         }}
+        position="sticky"
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -108,6 +109,6 @@ export default function NavBar() {
           </Toolbar>
         </Container>
       </AppBar>
-    </React.Fragment>
+    </div>
   );
 }

@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+@media screen and (max-width: 899px) {
+  .main {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}

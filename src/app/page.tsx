@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import { Tooltip } from "@mui/material";
 
 export default function Home() {
@@ -45,9 +45,9 @@ export default function Home() {
           </a>
         </Tooltip>
         <Tooltip title="Github">
-        <a href={`https://github.com/TimChoy`} target="_blank">
-          <GitHubIcon />
-        </a>
+          <a href={`https://github.com/TimChoy`} target="_blank">
+            <GitHubIcon />
+          </a>
         </Tooltip>
         <Tooltip title="Resume">
           <a href="/Timothy-Choy-Resume.pdf" target="_blank">
