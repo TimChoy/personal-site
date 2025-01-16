@@ -7,7 +7,7 @@ import {
   Chip,
   Typography,
   Divider,
-  Stack,
+  Grid,
 } from "@mui/material";
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -15,9 +15,18 @@ import styles from "./projectCard.module.css";
 import { IProjectProps } from "@/common/types";
 
 const ProjectCard = (props: IProjectProps) => {
+  // Colours taken from GitHub's language colours
+  // https://github.com/ozh/github-colors
+  const mapColourToTech: { [index: string]: string } = {
+    CSS: "#663399",
+    JavaScript: "#f1e05a",
+    MySQL: "#e38c00",
+    TypeScript: "#3178c6",
+  };
+
   return (
     <div className={styles.cardContainer}>
-      <Card>
+      <Card className={styles.cardStyles}>
         <CardContent className={styles.cardContent}>
           <Typography
             variant="h5"
@@ -26,21 +35,33 @@ const ProjectCard = (props: IProjectProps) => {
           >
             {props.title}
           </Typography>
-          <Stack direction="row" spacing={1}>
+          <Grid container spacing={1}>
             {props.technologies.map((data, index) => (
-              <Chip key={index} label={data} />
+              <Grid item key={index}>
+                <Chip
+                  key={index}
+                  label={data}
+                  variant="outlined"
+                  size="small"
+                  // Border colour will be based on language, or black otherwise
+                  sx={{
+                    borderColor: mapColourToTech[data] ?? "black" ,
+                    borderWidth: "2px",
+                  }}
+                />
+              </Grid>
             ))}
-          </Stack>
+          </Grid>
           <Divider sx={{ marginTop: "10px", marginBottom: "5px" }} />
           <Typography variant="body2" component="div">
             {props.description}
           </Typography>
-          <CardActions disableSpacing>
-            <a href={props.github} target="_blank">
-              <GitHubIcon />
-            </a>
-          </CardActions>
         </CardContent>
+        <CardActions sx={{ padding: "16px", justifyContent: "end" }}>
+          <a href={props.github} target="_blank">
+            <GitHubIcon />
+          </a>
+        </CardActions>
       </Card>
     </div>
   );

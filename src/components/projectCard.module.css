@@ -2,6 +2,13 @@
   text-align: left;
 }
 
+.cardStyles {
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .cardContent {
   padding: 16px !important;
 }
