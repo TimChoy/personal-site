@@ -8,7 +8,6 @@ import {
   Typography,
   Divider,
   Stack,
-  IconButton,
 } from "@mui/material";
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
