@@ -13,34 +13,38 @@ import {
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import styles from "./projectCard.module.css";
+import { IProjectProps } from "@/common/types";
 
-export default function ProjectCard() {
+const ProjectCard = (props: IProjectProps) => {
   return (
     <div className={styles.cardContainer}>
       <Card>
         <CardContent className={styles.cardContent}>
-          <Typography variant="h5" component="div" sx={{ marginBottom: "10px" }}>
-            Project Name
+          <Typography
+            variant="h5"
+            component="div"
+            sx={{ marginBottom: "10px" }}
+          >
+            {props.title}
           </Typography>
           <Stack direction="row" spacing={1}>
-            <Chip label="JavaScript" />
-            <Chip label="Java" />
-            <Chip label="C++" />
+            {props.technologies.map((data, index) => (
+              <Chip key={index} label={data} />
+            ))}
           </Stack>
           <Divider sx={{ marginTop: "10px", marginBottom: "5px" }} />
           <Typography variant="body2" component="div">
-            Project Description: Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Mollitia culpa pariatur vel minus eaque veniam
-            nostrum rem rerum repellendus ipsa? Quae placeat modi, molestiae
-            architecto dicta est. Natus, error cupiditate?
+            {props.description}
           </Typography>
           <CardActions disableSpacing>
-            <IconButton aria-label="Github">
+            <a href={props.github} target="_blank">
               <GitHubIcon />
-            </IconButton>
+            </a>
           </CardActions>
         </CardContent>
       </Card>
     </div>
   );
-}
+};
+
+export default ProjectCard;
