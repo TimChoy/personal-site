@@ -4,27 +4,27 @@ import styles from "./projects.module.css";
 import { IProjectProps } from "@/common/types";
 
 export default function Projects() {
-  // Will be moved to a backend eventually
+  // Should be moved elsewhere. This is temporary to display on the website
   const projectList: IProjectProps[] = [
     {
       title: "Personal Website",
-      technologies: ["TypeScript", "NextJS", "Vercel"],
+      technologies: ["TypeScript", "CSS", "NextJS", "Vercel", "Material UI"],
       description:
-        "My personal website. Written in TypeScript using NextJS and built/deployed using Vercel.",
+        "My personal website. Written in TypeScript using NextJS and built/deployed using Vercel. I plan on regularly improving and adding components to the website to try to learn new things and experiment with UI design.",
       github: "https://github.com/TimChoy/personal-site",
     },
     {
       title: "Project Sayyara",
-      technologies: ["TypeScript", "NextJS", "MySQL", "Vercel"],
+      technologies: ["TypeScript", "CSS", "MySQL", "NextJS", "Vercel"],
       description:
         "A progressive web application connecting vehicle owners to independent auto repair shops. Offers features which include comparing shops and scheduling appointments for vehicle owners, as well as employee management tools for shop owners. Built as the Capstone project for my software engineering program.",
       github: "https://github.com/TimChoy/project-sayyara",
     },
     {
       title: "Let's Hustle",
-      technologies: ["JavaScript", "ReactJS", "AWS EC2", "AWS S3"],
+      technologies: ["JavaScript", "MySQL", "ReactJS", "AWS EC2", "AWS S3"],
       description:
-        "A web application that allows users to search for local gyms, and contribute throuhg adding gyms and reviews.",
+        "A web application that allows users to search for local gyms, and contribute throuhg adding gyms and reviews. Think of Yelp, but for local gyms.",
       github: "https://github.com/TimChoy/4ww3-Hustle",
     },
   ];
