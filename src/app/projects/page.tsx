@@ -1,4 +1,5 @@
-import { Box, Grid } from "@mui/material";
+import { Box } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import ProjectCard from "@/components/projectCard";
 import styles from "./projects.module.css";
 import { IProjectProps } from "@/common/types";
@@ -38,7 +39,7 @@ export default function Projects() {
           columns={{ xs: 1, sm: 2, md: 3 }}
         >
           {projectList.map((project, index) => (
-            <Grid item xs={1} sm={1} md={1} key={index}>
+            <Grid key={index} size={{ xs: 1, sm: 1, md: 1 }}>
               <ProjectCard
                 title={project.title}
                 technologies={project.technologies}

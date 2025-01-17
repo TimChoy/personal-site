@@ -7,8 +7,8 @@ import {
   Chip,
   Typography,
   Divider,
-  Grid,
 } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import styles from "./projectCard.module.css";
@@ -35,21 +35,19 @@ const ProjectCard = (props: IProjectProps) => {
           >
             {props.title}
           </Typography>
-          <Grid container spacing={1}>
+          <Grid spacing={1}>
             {props.technologies.map((data, index) => (
-              <Grid item key={index}>
-                <Chip
-                  key={index}
-                  label={data}
-                  variant="outlined"
-                  size="small"
-                  // Border colour will be based on language, or black otherwise
-                  sx={{
-                    borderColor: mapColourToTech[data] ?? "black" ,
-                    borderWidth: "2px",
-                  }}
-                />
-              </Grid>
+              <Chip
+                key={index}
+                label={data}
+                variant="outlined"
+                size="small"
+                // Border colour will be based on language, or black otherwise
+                sx={{
+                  borderColor: mapColourToTech[data] ?? "black",
+                  borderWidth: "2px",
+                }}
+              />
             ))}
           </Grid>
           <Divider sx={{ marginTop: "10px", marginBottom: "5px" }} />
