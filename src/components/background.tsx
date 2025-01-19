@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const { produce } = require("immer");
 
 const numRows = 100;
-const numCols = 100;
+const numCols = 150;
 
 const operations = [
   [0, -1],
@@ -72,6 +72,7 @@ const Background = () => {
         zIndex: -999,
         overflow: "hidden",
         maxHeight: "100vh",
+        maxWidth: "100vw",
       }}
     >
       <div
