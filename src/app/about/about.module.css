@@ -1,47 +1,50 @@
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    height: calc(100vh - 66px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: calc(100vh - 66px);
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    max-width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 90%;
+  background-color: black;
+  border-radius: 2rem;
+  padding: 1rem;
 }
 
 .imageDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
 }
 
 .headshot {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .description {
-    max-width: 50%;
+  max-width: 50%;
 }
 
 @media screen and (max-width: 899px) {
-    .main {
-        height: auto;
-        margin-top: 22%;
-    }
+  .main {
+    height: auto;
+    margin-top: 22%;
+  }
 
-    .container {
-        flex-direction: column;
-        justify-content: center;
-    }
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .description {
-        max-width: 100%;
-    }
+  .description {
+    max-width: 100%;
+  }
 }

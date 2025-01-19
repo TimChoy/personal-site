@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import styles from "./background.module.css";
 const { produce } = require("immer");
 
 const numRows = 100;
@@ -19,7 +20,7 @@ const operations = [
 const generateGrid = () => {
   const rows = [];
   for (let i = 0; i < numRows; i++) {
-    rows.push(Array.from(Array(numCols), () => (Math.random() > 0.7 ? 1 : 0)));
+    rows.push(Array.from(Array(numCols), () => (Math.random() > 0.85 ? 1 : 0)));
   }
   return rows;
 };
@@ -60,39 +61,26 @@ const Background = () => {
           }
         });
       });
-    }, 200);
+    }, 100);
   }, [grid]);
 
   return (
-    <div
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        zIndex: -999,
-        overflow: "hidden",
-        maxHeight: "100vh",
-        maxWidth: "100vw",
-      }}
-    >
+    <div className={styles.backgroundContainer}>
       <div
+        className={styles.backgroundGrid}
         style={{
-          display: "grid",
           gridTemplateColumns: `repeat(${numCols}, 20px)`,
-          overflow: "hidden",
         }}
       >
         {grid.map((rows, i) =>
-          rows.map((col, j) => (
+          rows.map((_, j) => (
             <div
               key={`${i}-${j}`}
+              className={styles.cell}
               style={{
-                width: 20,
-                height: 20,
                 backgroundColor: grid[i][j]
                   ? "rgb(110,110,110)"
                   : "rgb(36,36,36)",
-                border: "solid 1px black",
               }}
             />
           ))
