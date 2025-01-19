@@ -1,10 +1,9 @@
 "use client";
-import useWindowDimensions from "@/utils/windowDimensions";
 import React, { useState, useEffect } from "react";
 const { produce } = require("immer");
 
-let numRows = 100;
-let numCols = 100;
+const numRows = 100;
+const numCols = 100;
 
 const operations = [
   [0, -1],
@@ -26,16 +25,9 @@ const generateGrid = () => {
 };
 
 const Background = () => {
-  const { width, height } = useWindowDimensions();
   const [grid, setGrid] = useState(() => {
     return generateGrid();
   });
-
-  useEffect(() => {
-    numRows = Math.trunc(height / 20);
-    numCols = Math.trunc(width / 20);
-    setGrid(generateGrid());
-  }, [width, height]);
 
   useEffect(() => {
     setTimeout(() => {
