@@ -35,19 +35,21 @@ const ProjectCard = (props: IProjectProps) => {
           >
             {props.title}
           </Typography>
-          <Grid spacing={1}>
+          <Grid container spacing={1}>
             {props.technologies.map((data, index) => (
-              <Chip
-                key={index}
-                label={data}
-                variant="outlined"
-                size="small"
-                // Border colour will be based on language, or black otherwise
-                sx={{
-                  borderColor: mapColourToTech[data] ?? "black",
-                  borderWidth: "2px",
-                }}
-              />
+              <Grid key={index} direction="row">
+                <Chip
+                  key={index}
+                  label={data}
+                  variant="outlined"
+                  size="small"
+                  // Border colour will be based on language, or black otherwise
+                  sx={{
+                    borderColor: mapColourToTech[data] ?? "black",
+                    borderWidth: "2px",
+                  }}
+                />
+              </Grid>
             ))}
           </Grid>
           <Divider sx={{ marginTop: "10px", marginBottom: "5px" }} />
