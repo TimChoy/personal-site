@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid2";
 import ProjectCard from "@/components/projectCard";
 import styles from "./projects.module.css";
 import { IProjectProps } from "@/common/types";
+import Background from "@/components/background";
 
 export default function Projects() {
   // Should be moved elsewhere. This is temporary to display on the website
@@ -31,25 +32,28 @@ export default function Projects() {
   ];
 
   return (
-    <div className={styles.main}>
-      <Box>
-        <Grid
-          container
-          spacing={{ xs: 2, sm: 4, md: 8 }}
-          columns={{ xs: 1, sm: 2, md: 3 }}
-        >
-          {projectList.map((project, index) => (
-            <Grid key={index} size={{ xs: 1, sm: 1, md: 1 }}>
-              <ProjectCard
-                title={project.title}
-                technologies={project.technologies}
-                description={project.description}
-                github={project.github}
-              />
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
+    <div>
+      <div className={styles.main}>
+        <Box>
+          <Grid
+            container
+            spacing={{ xs: 2, sm: 4, md: 8 }}
+            columns={{ xs: 1, sm: 2, md: 3 }}
+          >
+            {projectList.map((project, index) => (
+              <Grid key={index} size={{ xs: 1, sm: 1, md: 1 }}>
+                <ProjectCard
+                  title={project.title}
+                  technologies={project.technologies}
+                  description={project.description}
+                  github={project.github}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      </div>
+      <Background />
     </div>
   );
 }

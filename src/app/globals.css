@@ -1,13 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: rgb(36,36,36);
+  background: rgb(36, 36, 36);
+  width: 100%;
 }
 
 a {
   color: inherit;
-}
-
-.MuiMenuList-root {
-  background-color: black;
 }
