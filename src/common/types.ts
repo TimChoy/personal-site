@@ -3,4 +3,5 @@ export interface IProjectProps {
   technologies: Array<string>;
   description: string;
   github?: string;
+  href?: string;
 }
