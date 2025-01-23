@@ -9,11 +9,20 @@ export default function Projects() {
   // Should be moved elsewhere. This is temporary to display on the website
   const projectList: IProjectProps[] = [
     {
+      title: "Tim's Games",
+      technologies: ["TypeScript", "CSS", "NextJS", "Vercel", "Material UI"],
+      description:
+        "A website for minor games that I want to design. Written in a similar stack to my personal website.",
+      github: "https://github.com/TimChoy/tim-games",
+      href: "https://tim-games.vercel.app"
+    },
+    {
       title: "Personal Website",
       technologies: ["TypeScript", "CSS", "NextJS", "Vercel", "Material UI"],
       description:
         "My personal website. Written in TypeScript using NextJS and built/deployed using Vercel. I plan on regularly improving and adding components to the website to try to learn new things and experiment with UI design.",
       github: "https://github.com/TimChoy/personal-site",
+      href: "https://timchoy.vercel.app"
     },
     {
       title: "Project Sayyara",
@@ -47,6 +56,7 @@ export default function Projects() {
                   technologies={project.technologies}
                   description={project.description}
                   github={project.github}
+                  href={project.href}
                 />
               </Grid>
             ))}

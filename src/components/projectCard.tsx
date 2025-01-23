@@ -7,10 +7,11 @@ import {
   Chip,
   Typography,
   Divider,
+  IconButton,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import React from "react";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import { GitHub, OpenInNew } from "@mui/icons-material";
 import styles from "./projectCard.module.css";
 import { IProjectProps } from "@/common/types";
 
@@ -58,9 +59,26 @@ const ProjectCard = (props: IProjectProps) => {
           </Typography>
         </CardContent>
         <CardActions sx={{ padding: "16px", justifyContent: "end" }}>
-          <a href={props.github} target="_blank">
-            <GitHubIcon />
-          </a>
+          <IconButton
+            aria-label="github"
+            disabled={!props.github}
+            color="inherit"
+            href={props.github ? props.github : ""}
+            target="_blank"
+            title="Github"
+          >
+            <GitHub />
+          </IconButton>
+          <IconButton
+            aria-label="project link"
+            disabled={!props.href}
+            color="inherit"
+            href={props.href ? props.href : ""}
+            target="_blank"
+            title="Project Link"
+          >
+            <OpenInNew />
+          </IconButton>
         </CardActions>
       </Card>
     </div>
